@@ -7,5 +7,4 @@ To run this project:
 1. Make sure you have MongoDB downloaded and installed. 
 2. Download the countries.json package used in this example. 
 
-
-
+All the steps taken are specified in the MongoDB practice file (uploaded both as PDF and docx) and supported with screen shots. 
