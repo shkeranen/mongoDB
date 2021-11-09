@@ -1,0 +1,54 @@
+1)
+
+C:\Program Files\MongoDB\Server\5.0\bin>mongoimport --db=WBProjects --collection=countryInfo --jsonArray --file "C:\Program Files\MongoDB\countries.json"
+
+2) 
+
+C:\Program Files\MongoDB\Server\5.0\bin>mongo
+
+3) 
+
+use WBProjects
+
+show collections
+
+db.countryInfo.find()
+
+4) 
+
+db.countryInfo.find().pretty()
+
+5) 
+
+db.stats()
+ 
+6) 
+
+db.countryInfo.find().count()
+
+7) 
+
+db.countryInfo.findOne()
+
+8)
+
+db.countryInfo.find( {"region" : "Europe" } ).count()
+
+9)
+db.countryInfo.find( {"region" : {"$in" : ["Europe", "Africa"]} }).count()
+db.countryInfo.find({"region" : {"$in" : ["Europe", "Africa"]}}).pretty()
+
+10)
+db.countryInfo.find({"$and" : [{"region" : "Europe"}, {"currency" : "EUR"}]}).count()
+
+11)
+db.countryInfo.distinct("name", {"$and" : [{"region": "Europe" }, {"currency": "EUR"}]}).sort()
+
+12)
+db.countryInfo.find({"latitude" : {"$gt" : "4.00000000"}}).count()
+
+13) 
+db.countryInfo.find().sort({"latitude" : -1}).limit(1)
+
+ 
+ 
